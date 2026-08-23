@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about:blank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .link-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: 2px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .link-button:hover {
+            background-color: #292929;
+            transform: scale(1.05);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .link-button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Link Buttons</h2>
+
+    <div class="button-container">
+        <button class="link-button" onclick="location.href='URL_1_HERE'">Button 1 Name</button>
+        <button class="link-button" onclick="location.href='URL_2_HERE'">Button 2 Name</button>
+        <button class="link-button" onclick="location.href='URL_3_HERE'">Button 3 Name</button>
+        <button class="link-button" onclick="location.href='URL_4_HERE'">Button 4 Name</button>
+        <button class="link-button" onclick="location.href='URL_5_HERE'">Button 5 Name</button>
+    </div>
+
+</body>
+</html>
