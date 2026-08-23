@@ -51,30 +51,6 @@
 </head>
 <body>
 
-    <div id="key-overlay" style="
-  position: fixed;
-  inset: 0;
-  background: black;
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-">
-  <div id="key-login" style="
-    background: #111;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-  ">
-    <h2>Enter Access Key</h2>
-    <input id="accessKeyInput" type="password" placeholder="Access Key" style="padding:8px;">
-    <button onclick="checkKey()" style="padding:8px; margin-top:10px;">Login</button>
-    <p id="keyError" style="color:red; display:none; margin-top:10px;">Invalid key</p>
-  </div>
-</div>
-
-
     <h2>Best Unblocked Links</h2>
 
     <div class="button-container">
@@ -92,32 +68,6 @@
     <button class="link-button" onclick="location.href='https://bpslaunchpad.netlify.app/'">Website mirror 3</button>
 </div>
     <h2>(^^^^^other websites^^^^^)</h2>
-
-<script>
-const VALID_KEY = "lebron6791-key"; // did that just to find the key? aslong as ur not a teacher then ur good
-
-function checkKey() {
-  const input = document.getElementById("accessKeyInput").value;
-
-  if (input === VALID_KEY) {
-    localStorage.setItem("loggedIn", "true");
-
-    const overlay = document.getElementById("key-overlay");
-    if (overlay) overlay.remove();
-
-  } else {
-    document.getElementById("keyError").style.display = "block";
-  }
-}
-
-window.onload = () => {
-  if (localStorage.getItem("loggedIn") === "true") {
-    const overlay = document.getElementById("key-overlay");
-    if (overlay) overlay.remove();
-  }
-};
-</script>
-
 
 </body>
 </html>
