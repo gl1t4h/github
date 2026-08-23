@@ -50,13 +50,12 @@
 </head>
 <body>
 
-    <div id="key-login" style="display:none;">
+    <div id="key-login" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%); background:#fff; padding:20px; border:1px solid #ccc; z-index:9999;">
   <h2>Enter Access Key</h2>
   <input id="accessKeyInput" type="password" placeholder="Access Key">
   <button onclick="checkKey()">Login</button>
   <p id="keyError" style="color:red; display:none;">Invalid key</p>
 </div>
-
 
     <h2>Best Unblocked Links</h2>
 
@@ -76,6 +75,29 @@
 </div>
     <h2>(^^^^^other websites^^^^^)</h2>
 
+<script>
+const VALID_KEY = "YOUR_SECRET_KEY";
+
+function showLogin() {
+  document.getElementById("key-login").style.display = "block";
+}
+
+function checkKey() {
+  const input = document.getElementById("accessKeyInput").value;
+  if (input === VALID_KEY) {
+    localStorage.setItem("loggedIn", "true");
+    location.reload();
+  } else {
+    document.getElementById("keyError").style.display = "block";
+  }
+}
+
+window.onload = () => {
+  if (localStorage.getItem("loggedIn") !== "true") {
+    showLogin();
+  }
+};
+</script>
 
 </body>
 </html>
