@@ -50,12 +50,29 @@
 </head>
 <body>
 
-    <div id="key-login" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%); background:#fff; padding:20px; border:1px solid #ccc; z-index:9999;">
-  <h2>Enter Access Key</h2>
-  <input id="accessKeyInput" type="password" placeholder="Access Key">
-  <button onclick="checkKey()">Login</button>
-  <p id="keyError" style="color:red; display:none;">Invalid key</p>
+    <div id="key-overlay" style="
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
+  <div id="key-login" style="
+    background: #111;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+  ">
+    <h2>Enter Access Key</h2>
+    <input id="accessKeyInput" type="password" placeholder="Access Key" style="padding:8px;">
+    <button onclick="checkKey()" style="padding:8px; margin-top:10px;">Login</button>
+    <p id="keyError" style="color:red; display:none; margin-top:10px;">Invalid key</p>
+  </div>
 </div>
+
 
     <h2>Best Unblocked Links</h2>
 
@@ -71,7 +88,7 @@
 <div class="button-container">
     <button class="link-button" onclick="location.href='https://school.shyewilliams29.workers.dev/'">Website mirror 1</button>
     <button class="link-button" onclick="location.href='https://github-theta-topaz.vercel.app/'">Website mirror 2</button>
-    <button class="link-button" onclick="location.href='bpslaunchpad.netlify.app'">Website mirror 3</button>
+    <button class="link-button" onclick="location.href='https://bpslaunchpad.netlify.app/'">Website mirror 3</button>
 </div>
     <h2>(^^^^^other websites^^^^^)</h2>
 
