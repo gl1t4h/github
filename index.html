@@ -94,27 +94,30 @@
     <h2>(^^^^^other websites^^^^^)</h2>
 
 <script>
-const VALID_KEY = "lebron6791-key";
-
-function showLogin() {
-  document.getElementById("key-login").style.display = "block";
-}
+const VALID_KEY = "lebron6791-key"; // did that just to find the key? aslong as ur not a teacher then ur good
 
 function checkKey() {
   const input = document.getElementById("accessKeyInput").value;
+
   if (input === VALID_KEY) {
     localStorage.setItem("loggedIn", "true");
+
+    const overlay = document.getElementById("key-overlay");
+    if (overlay) overlay.remove();
+
   } else {
     document.getElementById("keyError").style.display = "block";
   }
 }
 
 window.onload = () => {
-  if (localStorage.getItem("loggedIn") !== "true") {
-    showLogin();
+  if (localStorage.getItem("loggedIn") === "true") {
+    const overlay = document.getElementById("key-overlay");
+    if (overlay) overlay.remove();
   }
 };
 </script>
+
 
 </body>
 </html>
