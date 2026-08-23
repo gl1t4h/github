@@ -1,5 +1,5 @@
 <script>
-const VALID_KEY = "xBac0pK-111";
+const VALID_KEY = "lebron1212";
 
 function showLogin() {
   document.getElementById("key-login").style.display = "block";
